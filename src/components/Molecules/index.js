@@ -9,6 +9,7 @@ const draw = () => {
 
 const addMolecule = (x, y) => {
   molecules.push(new Molecule(x, y));
+  console.log(molecules);
 };
 
 const Molecules = {

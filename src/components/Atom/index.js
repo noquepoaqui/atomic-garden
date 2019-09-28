@@ -1,12 +1,18 @@
-import { BOX_SIZE, OFFSET_FACTOR, HALF_ANIMATION, ANIMATION_LENGTH } from "./Constants";
+import { BOX_SIZE, OFFSET_FACTOR, HALF_ANIMATION, ANIMATION_LENGTH, ATOM_ANIMATION_LENGTH } from "./Constants";
 import Easing from "../../utils/Easing";
+import { MoleculeSound } from '../Sound';
 
 class Atom {
   constructor(x, y, importance) {
     this.x = x;
     this.y = y;
     this.importance = importance;
+    this.attack = 0.2;
+    this.decay = 1;
+    this.sustain = 1; 
+    this.release = 0.2;
     this.initialFrame = frameCount;
+    this.sound;
   }
 
   draw() {
